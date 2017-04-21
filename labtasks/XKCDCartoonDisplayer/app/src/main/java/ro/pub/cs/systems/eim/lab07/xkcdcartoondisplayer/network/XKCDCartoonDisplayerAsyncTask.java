@@ -6,6 +6,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import cz.msebera.android.httpclient.client.HttpClient;
+import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 import ro.pub.cs.systems.eim.lab07.xkcdcartoondisplayer.entities.XKCDCartoonInformation;
 
 public class XKCDCartoonDisplayerAsyncTask extends AsyncTask<String, Void, XKCDCartoonInformation> {
@@ -48,7 +50,8 @@ public class XKCDCartoonDisplayerAsyncTask extends AsyncTask<String, Void, XKCDC
         // - create an instance of a HttpGet object
         // - create an instance of a ResponseHandler object
         // - execute the request, thus obtaining the web page source code
-
+        HttpClient httpClient = new DefaultHttpClient();
+        
         // 2. parse the web page source code
         // - cartoon title: get the tag whose id equals "ctitle"
         // - cartoon url

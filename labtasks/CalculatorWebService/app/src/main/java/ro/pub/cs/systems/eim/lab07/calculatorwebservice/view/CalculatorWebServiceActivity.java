@@ -28,6 +28,7 @@ public class CalculatorWebServiceActivity extends AppCompatActivity {
             String operation = operationSpinner.getSelectedItem().toString();
             String method = String.valueOf(methodSpinner.getSelectedItemPosition());
 
+            // op si metode
             CalculatorWebServiceAsyncTask calculatorWebServiceAsyncTask = new CalculatorWebServiceAsyncTask(resultTextView);
             calculatorWebServiceAsyncTask.execute(operator1, operator2, operation, method);
         }
